@@ -3,8 +3,8 @@ import 'package:http/http.dart' as http;
 import 'package:spotify_clone/Models/album.dart';
 
 class API {
-  final _clientsecret = "cf11767ee8a9476181c4312221ae630a";
-  final _client_id = "ecdcb5ad7fa7470ca45a8ed28902da42";
+  final _clientsecret = "";
+  final _client_id = "";
   final _main_url = "https://api.spotify.com/v1";
   authorize() async {
     final str = "$_client_id:$_clientsecret";
