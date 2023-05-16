@@ -60,8 +60,18 @@ class _MenuState extends State<Menu> {
                 /*for (var item in snapshot.data as List) {
                   albums.add(item);
                 }*/
-                return Column(
-                  children: List.generate(3, (index) {
+                print(
+                    " In print 0: ${albums[0].name}, Counter +1: ${albums[1].name}, counter: $counter");
+                print(
+                    " In print 2: ${albums[2].name}, Counter +1: ${albums[3].name}, counter: $counter");
+                print(
+                    " In print 4: ${albums[4].name}, Counter +1: ${albums[4].name}, counter: $counter");
+                print("Album length: ${albums.length}");
+                return Column(children: [
+                  indiviualRow(0, context),
+                  indiviualRow(1, context),
+                  indiviualRow(3, context),
+                ]); /*List.generate(3, (index) {
                     counter += index;
                     print(
                         "Counter: $counter, In has data ${albums[counter].name}");
@@ -129,12 +139,72 @@ class _MenuState extends State<Menu> {
                       ),
                     );
                   }),
-                );
+                );*/
               } else {
                 print("not in has data");
                 return const OrdinaryMenu();
               }
             }),
+      ),
+    );
+  }
+
+  Padding indiviualRow(int counter, BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        bottom: 8,
+      ),
+      child: Row(
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DailyMix(
+                      album: albums[counter],
+                    ),
+                  ));
+            },
+            child: menuItem(
+                counter != 0
+                    ? Image(
+                        image: NetworkImage(albums[counter].images[0].url),
+                        fit: BoxFit.cover)
+                    : const Center(
+                        child: Icon(
+                          Icons.favorite,
+                          color: Colors.white,
+                        ),
+                      ),
+                counter == 0 ? "Liked Songs" : "${albums[counter].name}",
+                context),
+          ),
+          const SizedBox(width: 8),
+          GestureDetector(
+            onTap: () {
+              int ind = 0;
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DailyMix(
+                      album:
+                          counter == 0 ? albums[counter] : albums[counter + 1],
+                    ),
+                  ));
+            },
+            child: menuItem(
+                Image(
+                    image: NetworkImage(counter == 0
+                        ? albums[counter].images[0].url
+                        : albums[counter + 1].images[0].url),
+                    fit: BoxFit.cover),
+                counter == 0
+                    ? "${albums[counter].name}"
+                    : "${albums[counter + 1].name}",
+                context),
+          )
+        ],
       ),
     );
   }
