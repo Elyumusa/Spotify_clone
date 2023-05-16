@@ -10,7 +10,10 @@ This is a basic spotify clone, made in flutter, with the official spotify api an
   - firebase_dynamic_links: 
   - url_launcher: 
   - spotify_sdk: 
-  - get: 
+  - get:
+
+
+
  **Video Preview:**
  
  https://github.com/Elyumusa/Spotify_clone/assets/93226469/dee6ba3d-94f3-45b6-b8fc-0a9fe0507718
