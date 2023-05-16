@@ -23,9 +23,12 @@ This is a basic spotify clone, made in flutter, with the official spotify api an
    - Library Page
  ## Photos:
  
-![IMG_3150](https://github.com/Elyumusa/Spotify_clone/assets/93226469/53dd4c2d-6751-4a48-b30f-fd400313b7d3)
- 
-![IMG_3151](https://github.com/Elyumusa/Spotify_clone/assets/93226469/6f503fe9-b236-4218-8c2d-e1006e446233)
+![Screenshot (265)](https://github.com/Elyumusa/Spotify_clone/assets/93226469/d688de1c-6411-4b89-b7ea-af87a234e56e)
 
-![IMG_3152](https://github.com/Elyumusa/Spotify_clone/assets/93226469/28b5001f-97fe-4f97-bd86-7e7045afb33f)
+
+![Screenshot (268)](https://github.com/Elyumusa/Spotify_clone/assets/93226469/5dd44eeb-52c2-41b2-aaa2-e5ca874de18c)
+
+
+![Screenshot (270)](https://github.com/Elyumusa/Spotify_clone/assets/93226469/da6b636d-83a0-4079-b0bc-95f1806040b2)
+
 
